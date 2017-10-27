@@ -53,7 +53,7 @@ document.onkeyup = function(event) {
    }
 
 };
-
+//functions
 function updateDiaplay() {
 
     var letters = document.getElementById("letterdisplay");
