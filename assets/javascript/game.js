@@ -1,5 +1,4 @@
 
-
 var statusDiv = document.getElementById("status");
 
 var animals = ["cat", "dog", "tiger", "elephant", "lion", "fox", "python", "salmon", "rabbit", "kangaroo"];
@@ -9,6 +8,7 @@ var anm = animals[0];
 
 var tries = 0;
 var maxtry = 12;
+var winCount = 0;
 var lettersGuessed = "";
 
 var newGame = false;
@@ -43,8 +43,8 @@ document.onkeyup = function(event) {
 
    if (doneGuess(answer))
    {
-
-     statusDiv.innerHTML = "Right word!";
+     winCount++;
+     statusDiv.innerHTML = "You win! Nice animal!";
      newGame = true;
    }
    else if (tries >= maxtry) {
@@ -56,16 +56,17 @@ document.onkeyup = function(event) {
 
 function updateDiaplay() {
 
-  var letters = document.getElementById("letterdisplay");
-  letters.innerHTML = answer;
+    var letters = document.getElementById("letterdisplay");
+    letters.innerHTML = answerToString(answer);
 
-  var remainGuess = document.getElementById("remainGuess");
-  var remaining = maxtry-tries;
-  remainGuess.innerHTML = "You have " + remaining + " guesses remaining.";
+    var remainGuess = document.getElementById("remainGuess");
+    var remaining = maxtry-tries;
+    remainGuess.innerHTML = "You have " + remaining + " guesses remaining.";
 
-  document.getElementById("letGuessed").innerHTML = "You have guessed the following letters: " + lettersGuessed;
+    document.getElementById("letGuessed").innerHTML = "You have guessed the following letters: " + lettersGuessed;
 
-}
+    document.getElementById("winCount").innerHTML = "You've won " + winCount + " times!";
+  }
 
 function resetGame() {
   anm = animals[Math.floor(Math.random()*animals.length)];
@@ -89,4 +90,13 @@ function doneGuess(a) {
         }
     }
     return true;
+}
+
+function answerToString(a) {
+   var str = "";
+   for (var i = 0; i < a.length; i++) {
+      str = str + a[i] + " ";
+   }
+
+   return str;
 }

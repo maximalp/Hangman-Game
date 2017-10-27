@@ -1,4 +1,78 @@
-#remainGuess {
-  margin: auto;
+.mainhead{
+font-family: 'Chicle', cursive;
+font-size: 80px;
+color: #DB666B;
+text-align: center;
+margin:auto;
+padding: 40x;
+
+}
+
+.gameintro{
+  font-size: 25px;
+  color: #DB666B;
   text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:40px;
+}
+
+#bodystyle {
+background-color: #99C2D6;
+text-align: center;
+font-family: 'Noticia Text', serif;
+margin: auto;
+
+
+
+}
+
+
+#remainGuess {
+
+  text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:20px;
+  color: #DB666B;
+}
+
+#letterdisplay
+{
+  text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:20px;
+  font-size: 25px;
+
+}
+
+#letGuessed
+{
+  text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:20px;
+  color: #DB666B;
+}
+
+#status
+{
+  font-size:30px;
+  text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:20px;
+  color: ;
+  text-decoration:underline;
+  text-decoration-color: #DB666B
+}
+
+#winCount
+{
+  text-align: center;
+  font-family: 'Noticia Text', serif;
+  margin: auto;
+  padding:20px;
+  color: #DB666B;
 }
